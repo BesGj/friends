@@ -5,6 +5,7 @@
         <h1 class="display-5 fw-bold"><%= @friend.first_name %> <%= @friend.last_name %></h1>
         <p class="col-md-8 fs-4">Email: <%= @friend.email %> | Phone: <%= @friend.phone %> |  Twitter:  <%= @friend.twitter %> </p>
         <%= link_to 'Edit', edit_friend_path(@friend), class:"btn btn-info" %>
+        <%= link_to "Delete", @friend, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-danger my-0" %>
         <%= link_to 'Back', friends_path, class:"btn btn-info" %>
       </div>
     </div>
